@@ -1,9 +1,9 @@
 name: Sync MongoDB Data
 
+# Paused automatic MongoDB sync because the backup workflow is currently failing.
+# Keep workflow_dispatch so CAK3D can run it manually after Mongo credentials/schema are fixed.
 on:
-  schedule:
-    - cron: '0 0 * * *' # Runs daily at midnight UTC
-  workflow_dispatch: # Allows manual trigger
+  workflow_dispatch:
 
 jobs:
   sync-mongodb:
